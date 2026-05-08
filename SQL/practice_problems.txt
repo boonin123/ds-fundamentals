@@ -1,0 +1,66 @@
+-- ============================================================
+-- RavenStack SaaS SQL Practice Problems
+-- Dataset: subscription_churn_db (DuckDB)
+-- Tables: subscriptions (5,000 rows), support_tickets (2,000 rows)
+-- Note: boolean columns stored as VARCHAR ('True'/'False')
+--       date columns stored as VARCHAR — cast when needed
+-- ============================================================
+
+
+-- ========================
+-- EASY
+-- ========================
+
+-- Q1: Count the total number of subscriptions for each plan tier (Basic, Pro, Enterprise).
+--     Order results from most to least subscriptions.
+
+
+-- Q2: Find all currently active subscriptions.
+--     A subscription is active when it has not churned and has no end date.
+--     Return the subscription_id, account_id, plan_tier, and mrr_amount.
+
+
+-- Q3: What is the average MRR for monthly billing vs annual billing?
+--     Round to 2 decimal places.
+
+
+-- Q4: How many support tickets exist for each priority level (low, medium, high, urgent)?
+--     Include the percentage each priority makes up of total tickets.
+
+
+-- ========================
+-- MEDIUM
+-- ========================
+
+-- Q5: Find the top 10 accounts by total MRR across all their subscriptions.
+--     Return account_id and their summed MRR, ordered highest first.
+
+
+-- Q6: What is the average satisfaction score per priority level?
+--     Exclude tickets where satisfaction_score is NULL.
+--     Cast satisfaction_score to a number and round to 2 decimal places.
+
+
+-- Q7: What is the churn rate (%) for each plan tier?
+--     Churn rate = churned subscriptions / total subscriptions per tier.
+--     Round to 1 decimal place.
+
+
+-- ========================
+-- HARD
+-- ========================
+
+-- Q8: For subscriptions that churned, calculate the average subscription duration in days
+--     broken down by plan tier. Duration = end_date minus start_date.
+--     Both date columns are stored as VARCHAR — cast them to DATE.
+--     Order by average duration descending.
+
+
+-- Q9: Identify accounts that have BOTH an escalated support ticket AND a churned subscription.
+--     These are high-risk accounts that had product problems before leaving.
+--     Return account_id, number of escalated tickets, and total MRR across all their subscriptions.
+
+
+-- Q10: Show the number of new subscriptions started each month and a running cumulative total.
+--      Use a window function for the running total.
+--      Format the month as YYYY-MM and order chronologically.
