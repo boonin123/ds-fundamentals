@@ -7,5 +7,6 @@ Thought it would be a good exercise to jump back into some of the fundamentals.
 All the **code** I write will be GenAI-less (so I can practice!). I will use Claude to help write practice questions. Unfortunately, this means that this repo will look significantly less visually appealing than my other work. Worth it though.
 
 ## 1. SQL Work
+10 Problems (Easy, Medium, Hard)
 - Tools: DuckDB (SQL DBMS), DBeaver (GUI)
 - Data: [SaaS Subscription & Churn Analytics Dataset](https://www.kaggle.com/datasets/rivalytics/saas-subscription-and-churn-analytics-dataset?select=ravenstack_feature_usage.csv)
